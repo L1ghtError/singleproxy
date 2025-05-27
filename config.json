@@ -1,0 +1,35 @@
+{
+    "address": "127.0.0.1",
+    "port": 53,
+    "forwarder": {
+        "address": "10.255.255.254",
+        "port": 53
+    },
+    "filters": [
+        {
+            "host": "netflix.com",
+            "type": "ALL",
+            "matching": "contains",
+            "action": "refuse"
+        },
+        {
+            "host": "example.com",
+            "type": "ALL",
+            "matching": "contains",
+            "action": "refuse"
+        },
+        {
+            "host": "google.com",
+            "type": "A",
+            "matching": "exact",
+            "action": "discard"
+        },
+        {
+            "host": "www.openai.com",
+            "type": "ALL",
+            "matching": "exact",
+            "action": "redirect",
+            "redirect_addr" : "52.60.138.10"
+        }
+    ]
+}

@@ -1,6 +1,8 @@
 ## DNS Proxy
 ### How to build
 ```bash
+$ git clone --recursive https://github.com/L1ghtError/singleproxy.git
+$ cd singleproxy
 $ mkdir build
 $ cd build
 $ cmake ..
